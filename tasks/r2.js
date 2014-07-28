@@ -33,14 +33,14 @@ module.exports = function (grunt) {
           return true;
         }
       }).map(function (filepath) {
-          // Read file source.
-          return grunt.file.read(filepath);
-        }).join(grunt.util.normalizelf(grunt.util.linefeed));
+        // Read file source.
+        return grunt.file.read(filepath);
+      }).join(grunt.util.normalizelf(grunt.util.linefeed));
 
       grunt.log.writeln('Converting "' + f.src + '".');
 
       // Write the destination file.
-      grunt.file.write(f.dest, r2.swap(src));
+      grunt.file.write(f.dest, src + grunt.util.linefeed + grunt.util.linefeed + r2.swap(src));
 
       // Print a success message.
       grunt.log.writeln('File "' + f.dest + '" created.');

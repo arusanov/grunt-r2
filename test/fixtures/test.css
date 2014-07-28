@@ -1,3 +1,7 @@
+.untouched {
+    color: red;
+}
+
 p.borders {border-left:1px;}
 
 p.borders_color {border-color:#000 #111 #222 #333;}
